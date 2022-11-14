@@ -13,7 +13,8 @@ class UnmappedApiPayments extends Controller
 {
    public function index(){
     $unmapped=UnmappedPayment::whereMapped('0')->get();
-    $tenants=Tenant::whereStatus('1')->get();
+    $business=config('settings.default_property')->id;
+    $tenants=Tenant::whereStatus('1')->where('property_id',$business)->get();
     
     $breadcrumbs = [
         ['link' => "/", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Unmapped Payment"]

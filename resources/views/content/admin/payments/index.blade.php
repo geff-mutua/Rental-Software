@@ -66,9 +66,7 @@
                   </td>
                 </tr>
             @empty
-                <tr class="text-center">
-                  <td colspan="8">No Payments Received</td>
-                </tr>
+               
             @endforelse
         </tbody>
        

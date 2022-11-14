@@ -33,7 +33,7 @@
       </div>
       @endif
 
-      <table class="dt-responsive table">
+      <table class="dt-responsive table" id="myTable" >
         <thead>
           <tr>
             <th>#</th>
@@ -50,9 +50,7 @@
                     <td><a href="{{route('expenditure.catdel',['id'=>$item->id])}}" class="text-danger"> <span class="text-danger cursor-pointer" data-feather="trash"></span> Remove</a></td>
                 </tr>
             @empty
-                <tr class="text-center">
-                    <td colspan="3">No Category Registered</td>
-                </tr>
+              
             @endforelse
         </tbody>
       </table>

@@ -11,7 +11,8 @@
     <div class="card-header border-bottom">
         <a href="javascript:void(0)" data-target="#filterPayments" data-toggle="modal" class="btn btn-sm btn-secondary">Filter Statement</a>
       <div class="pull-right">
-       
+
+        <a href="{{route('export.statement',['month'=>$month,'year'=>$year])}}" class="btn btn-sm btn-success">Export </a>
         <a href="{{route('print.statements',['month'=>$month,'year'=>$year])}}" class="btn btn-sm btn-info">Print Statement</a>
         {{-- <a href="{{route('payments.receipts',['month'=>'September','year'=>'2022'])}}" class="btn btn-sm btn-success">Import</a> --}}
        

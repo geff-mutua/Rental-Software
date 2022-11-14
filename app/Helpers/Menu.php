@@ -86,7 +86,7 @@ class Menu
             ],
             [
                 'name'=>'Expenditures',
-                'icon'=>'file',
+                'icon'=>'book',
                 'slug' => 'expenditure.index',
                 'route'=>'expenditure.index',
                 'color'=>'text-primary',

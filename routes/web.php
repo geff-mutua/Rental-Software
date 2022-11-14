@@ -12,6 +12,7 @@ use App\Http\Controllers\API\Payments\MPESAController;
 use App\Http\Controllers\Admin\Invoices\TenantInvoices;
 use App\Http\Controllers\Admin\Tenants\TenantController;
 use App\Http\Controllers\Admin\Company\CompanyController;
+use App\Http\Controllers\Admin\Exports\ExportsController;
 use App\Http\Controllers\Admin\Paybill\PaybillController;
 use App\Http\Controllers\Admin\Payment\PaymentController;
 use App\Http\Controllers\Admin\Property\PropertyController;
@@ -117,6 +118,10 @@ Route::middleware(['auth'])->group(function () {
 
     //Other Routes
     Route::get('switch/biz/{id}',[MainDashboard::class,'switch_biz']);
+
+
+    #Exports
+    Route::get('export-statement/{month}/{year}',[ExportsController::class,'exportStatement'])->name('export.statement');
 });
 
     //Mpesa Routes

@@ -35,7 +35,7 @@
       </div>
       @endif
 
-      <table class="dt-responsive table">
+      <table class="dt-responsive table" id="myTable">
         <thead>
           <tr>
             <th>#</th>
